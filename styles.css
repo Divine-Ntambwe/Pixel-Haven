@@ -4,3 +4,56 @@
     padding: 0 ;
 }
 
+:root {
+    --top-header-height: 82px;
+    --nav-bar-height: 75px;
+}
+
+
+.main-section {
+    width: 100%;
+}
+
+.pixel-haven {
+    border: 5px solid pink;
+}
+
+.top-header {
+    height: var(--top-header-height);
+    position: sticky;
+    top: 0;
+    border: 1px solid aqua;
+}
+
+.nav-bar {
+    height: var(--nav-bar-height);
+    border: 2px solid blue ;
+    position: sticky;
+    top: var(--top-header-height);
+    left:0 ;
+    
+}
+
+nav {
+    position: absolute;
+    height: 100%;
+    border: 2px solid purple ;
+    width: 100%;
+  
+    
+}
+
+.main-body {
+    height: auto ;
+    border:4px solid green ;
+    position: relative;
+    top: Calc(var(--nav-bar-height) * -1);
+    z-index: -1;
+}
+
+header {
+    height: calc(100vh - var(--top-header-height));
+    border: 2px solid purple ;
+
+}
+
