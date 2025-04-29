@@ -10,12 +10,6 @@
     --live-chat: 65px;
     --header: calc(100vh - var(--top-header-height));
 }
-/* body{
-    position: absolute;
-    top:0;
-    left: 0;
-} */
-
 
 .main-section {
     width: 100%;
@@ -23,13 +17,13 @@
 
 .header-circle {
   height: 100vh;
-  border: 2px solid orange;
+  border: 1px solid orange;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  position: sticky;
+  position: fixed;
   top:0;
-  z-index: 1;
+  
 }
 
 .live-chat {
@@ -50,9 +44,10 @@
 
 
 .pixel-haven {
-    border: 10px solid pink;
-    position: absolute;
-    top: -80px;
+    border: 5px solid pink;
+    position: relative;
+    top:82px;
+    height: fit-content;
     /* height: calc(var(--header) + 105vh + 300vh + 50vh); */
 }
 
@@ -61,16 +56,15 @@
 .nav-bar {
     height: var(--nav-bar-height);
     border: 1px solid blue ;
-    position: sticky;
+    position: fixed;
     top: var(--top-header-height);
     left:0 ;
     
 }
 
 nav {
-    position: absolute;
     height: 100%;
-    border: 2px solid purple ;
+    border: 2px solid red;
     width: 100%;
   
     
@@ -101,7 +95,7 @@ header {
 }
 
 footer {
-  height: 50vh;
+  height: 48vh;
   border: 1px solid green;
   position: relative;
 
