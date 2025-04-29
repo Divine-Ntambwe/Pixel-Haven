@@ -7,27 +7,60 @@
 :root {
     --top-header-height: 82px;
     --nav-bar-height: 75px;
+    --live-chat: 65px;
+    --header: calc(100vh - var(--top-header-height));
 }
+/* body{
+    position: absolute;
+    top:0;
+    left: 0;
+} */
 
 
 .main-section {
     width: 100%;
 }
 
-.pixel-haven {
-    border: 5px solid pink;
+.header-circle {
+  height: 100vh;
+  border: 2px solid orange;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: sticky;
+  top:0;
+  z-index: 1;
+}
+
+.live-chat {
+    border: 4px solid black;
+    border-radius: 100%;
+    height: var(--live-chat);;
+    width: var(--live-chat);;
+    align-self: self-end;
+    margin: 0 20px 20px 0;
+   
 }
 
 .top-header {
     height: var(--top-header-height);
-    position: sticky;
-    top: 0;
     border: 1px solid aqua;
 }
 
+
+
+.pixel-haven {
+    border: 10px solid pink;
+    position: absolute;
+    top: -80px;
+    /* height: calc(var(--header) + 105vh + 300vh + 50vh); */
+}
+
+
+
 .nav-bar {
     height: var(--nav-bar-height);
-    border: 2px solid blue ;
+    border: 1px solid blue ;
     position: sticky;
     top: var(--top-header-height);
     left:0 ;
@@ -45,9 +78,9 @@ nav {
 
 .main-body {
     height: auto ;
-    border:4px solid green ;
+    border:1px solid green ;
     position: relative;
-    top: Calc(var(--nav-bar-height) * -1);
+    /* top: Calc(var(--nav-bar-height) * -1); */
     z-index: -1;
 }
 
@@ -57,3 +90,19 @@ header {
 
 }
 
+.explore {
+    height: 105vh;
+    border: 1px solid orange;
+}
+
+.nostalgic, .new-game, .exclusives {
+    height: 100vh;
+    border: 1px solid red;
+}
+
+footer {
+  height: 50vh;
+  border: 1px solid green;
+  position: relative;
+
+}
