@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0 ;
+    font-family: "Montserrat", sans-serif;
 }
 
 :root {
@@ -27,24 +28,41 @@
 }
 
 .live-chat {
-    border: 4px solid black;
+    border: 4px solid white;
     border-radius: 100%;
     height: var(--live-chat);;
     width: var(--live-chat);;
     align-self: self-end;
-    margin: 0 20px 20px 0;
+    margin: 0 15px 15px 0;
+    background-color: black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.live-chat i {
+    color: white;
+    font-size: 1.6rem;
    
 }
 
 .top-header {
     height: var(--top-header-height);
     border: 1px solid aqua;
+   
+}
+
+.top-header img {
+    height: inherit;
+    width: 115px;
+    margin-left: 170px;
 }
 
 
-
 .pixel-haven {
-    border: 5px solid pink;
+    border: 1px solid pink;
     position: relative;
     top:82px;
     height: auto;
@@ -62,32 +80,51 @@
 }
 
 #home-nav-bar {
-position:sticky;
+position:fixed;
 height: var(--nav-bar-height);
-border: 1px solid blue ;
 
 }
 
 nav {
     height: 100%;
-    border: 2px solid red;
-    width: 100%;
-  
-    
+    width: 100%;  
+   background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 45px;
+    color: white;
 }
+
+nav img {
+    height: 70%;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+li {
+    list-style-type: none;
+   
+}
+
+.nav-icons  {
+ display: flex;
+ gap: 20px;
+ font-size: 20px;
+}
+
 
 
 .main-body {
     height: auto ;
     border:1px solid green ;
     position: relative;
-    /* top: Calc(var(--nav-bar-height) * -1); */
-
-}
-
-.shop-now-pages {
+    z-index: -1;
    
-
 }
 
 
@@ -96,17 +133,58 @@ nav {
 header {
     height: calc(100vh - var(--top-header-height));
     border: 2px solid purple ;
+    background-image: url(images/tenweb_media_uFE5LKUk.webp);
+    background-repeat: no-repeat;
+    background-size:cover;
+    filter: brightness(60%);
 
 }
 
 .explore {
-    height: 105vh;
+    height: 110vh;
     border: 1px solid orange;
+    padding-top: 70px ;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+#explore-container {
+    height:560px;
+    width: 1250px;
+    margin: 60px auto;
+    border: 2px solid brown;
 }
 
 .nostalgic, .new-game, .exclusives {
     height: 100vh;
     border: 1px solid red;
+    background-color:rgb(241, 241, 241);
+    padding: 110px ;
+}
+
+h3 {
+    font-size: 2.5rem;
+
+}
+
+.par-button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.par-button-container button {
+    height: 50px;
+    width: 130px;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 17px;
+}
+
+.par-button-container p {
+    align-self: flex-end;
 }
 
 footer {
