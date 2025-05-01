@@ -47,8 +47,7 @@
     border: 5px solid pink;
     position: relative;
     top:82px;
-    height: fit-content;
-    /* height: calc(var(--header) + 105vh + 300vh + 50vh); */
+    height: auto;
 }
 
 
@@ -56,10 +55,17 @@
 .nav-bar {
     height: var(--nav-bar-height);
     border: 1px solid blue ;
-    position: fixed;
+    position: sticky;
     top: var(--top-header-height);
     left:0 ;
     
+}
+
+#home-nav-bar {
+position:sticky;
+height: var(--nav-bar-height);
+border: 1px solid blue ;
+
 }
 
 nav {
@@ -70,13 +76,22 @@ nav {
     
 }
 
+
 .main-body {
     height: auto ;
     border:1px solid green ;
     position: relative;
     /* top: Calc(var(--nav-bar-height) * -1); */
-    z-index: -1;
+
 }
+
+.shop-now-pages {
+   
+
+}
+
+
+/* HOME PAGE */
 
 header {
     height: calc(100vh - var(--top-header-height));
@@ -96,7 +111,42 @@ header {
 
 footer {
   height: 48vh;
-  border: 1px solid green;
+  border: 7px solid yellow;
   position: relative;
+
+}
+
+/* SHOP NOW PAGES */
+.seasonal {
+    background-color: black;
+    height: 45px;
+}
+
+.shop-now-headings {
+    border: 2px solid red;
+    height: 170px;
+
+}
+.shop-now-container {
+    border: 2px solid blue;
+    display:flex ;
+   
+}
+
+.selection-bar {
+    border: 4px solid purple;
+    height: calc(100vh - var(--nav-bar-height) - var(--top-header-height));
+    width: 290px;
+    position: sticky;
+    top: calc(var(--nav-bar-height) + var(--top-header-height));;
+
+
+}
+
+.products-shop-now {
+    border: 6px solid green;
+    height: 100vh;
+    width:100%;
+
 
 }
