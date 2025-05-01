@@ -4,3 +4,149 @@
     padding: 0 ;
 }
 
+:root {
+    --top-header-height: 82px;
+    --nav-bar-height: 75px;
+    --live-chat: 65px;
+    --header: calc(100vh - var(--top-header-height));
+}
+
+.main-section {
+    width: 100%;
+}
+
+.header-circle {
+  height: 100vh;
+  border: 1px solid orange;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top:0;
+  
+}
+
+.live-chat {
+    border: 4px solid black;
+    border-radius: 100%;
+    height: var(--live-chat);;
+    width: var(--live-chat);;
+    align-self: self-end;
+    margin: 0 20px 20px 0;
+   
+}
+
+.top-header {
+    height: var(--top-header-height);
+    border: 1px solid aqua;
+}
+
+
+
+.pixel-haven {
+    border: 5px solid pink;
+    position: relative;
+    top:82px;
+    height: auto;
+}
+
+
+
+.nav-bar {
+    height: var(--nav-bar-height);
+    border: 1px solid blue ;
+    position: sticky;
+    top: var(--top-header-height);
+    left:0 ;
+    
+}
+
+#home-nav-bar {
+position:sticky;
+height: var(--nav-bar-height);
+border: 1px solid blue ;
+
+}
+
+nav {
+    height: 100%;
+    border: 2px solid red;
+    width: 100%;
+  
+    
+}
+
+
+.main-body {
+    height: auto ;
+    border:1px solid green ;
+    position: relative;
+    /* top: Calc(var(--nav-bar-height) * -1); */
+
+}
+
+.shop-now-pages {
+   
+
+}
+
+
+/* HOME PAGE */
+
+header {
+    height: calc(100vh - var(--top-header-height));
+    border: 2px solid purple ;
+
+}
+
+.explore {
+    height: 105vh;
+    border: 1px solid orange;
+}
+
+.nostalgic, .new-game, .exclusives {
+    height: 100vh;
+    border: 1px solid red;
+}
+
+footer {
+  height: 48vh;
+  border: 7px solid yellow;
+  position: relative;
+
+}
+
+/* SHOP NOW PAGES */
+.seasonal {
+    background-color: black;
+    height: 45px;
+}
+
+.shop-now-headings {
+    border: 2px solid red;
+    height: 170px;
+
+}
+.shop-now-container {
+    border: 2px solid blue;
+    display:flex ;
+   
+}
+
+.selection-bar {
+    border: 4px solid purple;
+    height: calc(100vh - var(--nav-bar-height) - var(--top-header-height));
+    width: 290px;
+    position: sticky;
+    top: calc(var(--nav-bar-height) + var(--top-header-height));;
+
+
+}
+
+.products-shop-now {
+    border: 6px solid green;
+    height: 100vh;
+    width:100%;
+
+
+}
