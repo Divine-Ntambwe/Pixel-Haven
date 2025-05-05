@@ -86,7 +86,6 @@
 #home-nav-bar {
 position:fixed;
 height: var(--nav-bar-height);
-pointer-events: none;
 z-index: 10;
 
 }
@@ -139,13 +138,51 @@ li {
 header {
     height: calc(100vh - var(--top-header-height));
     border: 2px solid purple ;
-    background-image: url(images/tenweb_media_uFE5LKUk.webp);
-    background-repeat: no-repeat;
-    background-size:cover;
-    filter: brightness(60%);
 
 }
 
+.header-swiper swiper-slide {
+    background-repeat: no-repeat;
+    background-size:cover;
+    
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+   
+   
+}
+
+@keyframes slide1-image {
+    from {transform: scale(1)}
+    to {transform: scale(1.2)}
+}
+
+.header-swiper img {
+    animation: slide1-image 5s;
+    animation-iteration-count: infinite;
+}
+
+.header-headings {
+    color: white;
+    padding: 0px 550px 0 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.header-swiper button {
+    height: 50px;
+    width: 160px ;
+    text-align: center;
+    border-radius: 5px;
+    border-color: white;
+    background-color: white;
+    font-size: 17px;
+}
 .explore {
     height: 110vh;
     border: 1px solid orange;
@@ -169,7 +206,9 @@ swiper-container {
     width: 100%;
     height: 100%;
   }
-swiper-slide {
+
+
+.explore-swiper swiper-slide {
     text-align: center;
     font-size: 18px;
     background: #fff;
@@ -196,8 +235,7 @@ swiper-slide img {
     position: absolute;
     z-index: -1;
   }
-
-swiper-slide button {
+.explore-swiper button {
  height: 50px;
  width: 140px ;
  text-align: center;
@@ -209,7 +247,7 @@ swiper-slide button {
  
 } 
 
-swiper-slide p {
+.explore-swiper p {
     color: white;
     font-weight: bold;
     font-size: 26px;
@@ -296,14 +334,77 @@ h3 {
 }
 
 
-
+.top-footer {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 60px;
+}
 footer {
-  height: 48vh;
-  border: 7px solid yellow;
-  position: relative;
+    padding: 75px 50px;
+    height: 60vh;
+}
+
+.footer-cols {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    width: 50%;
+}
+
+.footer-cols div {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+h4 {
+    font-size: 22px;
+}
+
+.join-news {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;  
+    margin-left: 280px;
 
 }
 
+footer input {
+    height: 50px;
+    border-radius: 5px;
+}
+
+.email { 
+    width: 270px;
+    border-color: rgba(0,0,0,0.4);
+    padding: 20px;
+}
+
+.subscribe-button {
+width: 170px;
+background-color: black;
+color: white ;
+}
+
+footer a, footer p {
+    font-size: 14px;
+}
+
+.bottom-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 100px;
+    margin-top: 20px;
+
+}
+
+.bottom-footer div {
+    display: flex;
+    gap: 20px;
+}
 /* SHOP NOW PAGES */
 .seasonal {
     background-color: black;
