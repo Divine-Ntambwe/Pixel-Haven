@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0 ;
+    font-family: "Montserrat", sans-serif;
 }
 
 :root {
@@ -23,29 +24,50 @@
   justify-content: space-between;
   position: fixed;
   top:0;
+  pointer-events:none;
+  cursor: grab;
+  z-index: 10;
   
 }
 
 .live-chat {
-    border: 4px solid black;
+    border: 4px solid white;
     border-radius: 100%;
     height: var(--live-chat);;
     width: var(--live-chat);;
     align-self: self-end;
-    margin: 0 20px 20px 0;
+    margin: 0 15px 15px 0;
+    background-color: black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.live-chat i {
+    color: white;
+    font-size: 1.6rem;
    
 }
 
 .top-header {
     height: var(--top-header-height);
     border: 1px solid aqua;
+    background-color: white;
+   
+}
+
+.top-header img {
+    height: inherit;
+    width: 115px;
+    margin-left: 170px;
 }
 
 
-
 .pixel-haven {
-    border: 5px solid pink;
-    position: relative;
+    border: 1px solid pink;
+    position: absolute;
     top:82px;
     height: auto;
 }
@@ -62,32 +84,52 @@
 }
 
 #home-nav-bar {
-position:sticky;
+position:fixed;
 height: var(--nav-bar-height);
-border: 1px solid blue ;
+z-index: 10;
 
 }
 
 nav {
     height: 100%;
-    border: 2px solid red;
-    width: 100%;
-  
-    
+    width: 100%;  
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 45px;
+    color: white;
 }
+
+nav img {
+    height: 70%;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+li {
+    list-style-type: none;
+   
+}
+
+.nav-icons  {
+ display: flex;
+ gap: 20px;
+ font-size: 20px;
+}
+
 
 
 .main-body {
     height: auto ;
     border:1px solid green ;
     position: relative;
-    /* top: Calc(var(--nav-bar-height) * -1); */
-
-}
-
-.shop-now-pages {
+    /* z-index: -1; */
    
-
 }
 
 
@@ -99,23 +141,270 @@ header {
 
 }
 
+.header-swiper swiper-slide {
+    background-repeat: no-repeat;
+    background-size:cover;
+    
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+   
+   
+}
+
+@keyframes slide1-image {
+    from {transform: scale(1)}
+    to {transform: scale(1.2)}
+}
+
+.header-swiper img {
+    animation: slide1-image 5s;
+    animation-iteration-count: infinite;
+}
+
+.header-headings {
+    color: white;
+    padding: 0px 550px 0 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.header-swiper button {
+    height: 50px;
+    width: 160px ;
+    text-align: center;
+    border-radius: 5px;
+    border-color: white;
+    background-color: white;
+    font-size: 17px;
+}
 .explore {
-    height: 105vh;
+    height: 110vh;
     border: 1px solid orange;
+    padding-top: 70px ;
 }
 
+h2 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+#explore-container {
+    height:560px;
+    width: 1250px;
+    margin: 60px auto;
+    border: 2px solid brown;
+}
+
+/* SWIPER 2 */
+swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+
+.explore-swiper swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid blue;
+    border-radius: 8px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+   
+  }
+
+swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(60%);
+    position: absolute;
+    z-index: -1;
+  }
+.explore-swiper button {
+ height: 50px;
+ width: 140px ;
+ text-align: center;
+ border-radius: 5px;
+ border-color: white;
+ background-color: white;
+ font-size: 17px;
+ font-weight: 200;
+ 
+} 
+
+.explore-swiper p {
+    color: white;
+    font-weight: bold;
+    font-size: 26px;
+}
 .nostalgic, .new-game, .exclusives {
-    height: 100vh;
-    border: 1px solid red;
+    height: 115vh;
+    background-color:rgb(241, 241, 241);
+    padding: 110px ;
 }
 
+h3 {
+    font-size: 2.5rem;
+
+}
+
+.par-button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.par-button-container button {
+    height: 50px;
+    width: 130px;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 17px;
+}
+
+.par-button-container p {
+    align-self: flex-end;
+}
+
+.home-products-container {
+    height: 550px;
+    width: 100%;
+    margin:70px 0 70px 0;
+    display: flex;
+    gap: 15px
+}
+
+.home-products {
+ height: 100% ;
+ width: 100%;
+ display: flex;
+ flex-direction: column;
+ gap: 15px;
+
+}
+.home-products:hover {
+    border: 1px solid black;
+}
+
+.home-products img {
+    height: 80%;
+    width: 100%;
+
+}
+
+.product-name {
+    font-weight: bold;
+}
+
+.product-details {
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.prev-price {
+    text-decoration: line-through;
+}
+
+.cart-link:hover {
+    color: red ;
+    cursor: grab;
+}
+
+
+
+.cart-link {
+    text-decoration: underline;
+    color: black;
+}
+
+
+.top-footer {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 60px;
+}
 footer {
-  height: 48vh;
-  border: 7px solid yellow;
-  position: relative;
+    padding: 75px 50px;
+    height: 60vh;
+}
+
+.footer-cols {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    width: 50%;
+}
+
+.footer-cols div {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+h4 {
+    font-size: 22px;
+}
+
+.join-news {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;  
+    margin-left: 280px;
 
 }
 
+footer input {
+    height: 50px;
+    border-radius: 5px;
+}
+
+.email { 
+    width: 270px;
+    border-color: rgba(0,0,0,0.4);
+    padding: 20px;
+}
+
+.subscribe-button {
+width: 170px;
+background-color: black;
+color: white ;
+}
+
+footer a, footer p {
+    font-size: 14px;
+}
+
+.bottom-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 100px;
+    margin-top: 20px;
+
+}
+
+.bottom-footer div {
+    display: flex;
+    gap: 20px;
+}
 /* SHOP NOW PAGES */
 .seasonal {
     background-color: black;

@@ -5,13 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="https://10web.io/wp-content/themes/10web-theme/images/icons/favicon/favicon.png">
+    <!-- <link rel="stylesheet" id="font-open-sans.css_css-css" href="https://10web.io/wp-content/themes/10web-theme/css/font-open-sans.css?ver=24.01.596" type="text/css" media="all"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Pixel Haven</title>
 </head>
 <body>
     <div class="header-circle main-section">
-        <div class="top-header main-section">10Web</div>
+        <div class="top-header main-section">
+            <img src="images/logo.svg">
+        </div>
     
-        <div class="live-chat"></div>
+        <div class="live-chat"><i class="fa-solid fa-message"></i> </div>
     
     </div>
     
@@ -21,43 +29,299 @@
         <div id="home-nav-bar" class="main-section">
            
             <nav>
-             Nav bar
+             <img src="images/logo_Hd7llw8M.webp">
+             <div class="nav-items">
+                <ul>
+                    <li><a href="video_games.html">Video Games</a></li>
+                    <li><a>Consoles</a></li>
+                    <li><a>Accessories</a></li>
+                    <li><a>Retro Classics</a></li>
+                </ul>
+             </div>
+             <div class="nav-icons"><i class="fa-solid fa-user"></i> <i class="fa-solid fa-bag-shopping"></i></div>
             </nav>
 
         </div>
        
         <div class="main-body main-section">
             <header class="main-section">
-              header
+                <swiper-container  class="header-swiper" 
+                    autoplay-delay="4000"
+                    stopOnLastSlide="true"
+                    loop="true"
+                    speed="1000">
+
+                    <swiper-slide id="slide1">
+                        <img src="images/tenweb_media_VIjXrcyZ.webp">
+                        <div class="header-headings">
+                            <h1>Discover Exclusive Gaming Deals</h1>
+                            <p>Dive into our world of gaming with our unbeatable offers on top video games, consoles, and accessories. Experience the thrill of gaming at Pixel Haven </p>
+                            <button>Explore Deals</button>
+                        </div>
+                     
+                    </swiper-slide>
+
+                    <swiper-slide id="slide2">
+                        <img src="images/tenweb_media_uFE5LKUk.webp">
+                        <div class="header-headings">
+                            <h1>Curated Collections Await You</h1>
+                            <p>Explore our handpicked collections featuring retro classics and the latest releases. Find your next favourite game with ease and excitement</p>
+                            <button>View Collections</button>
+                        </div>
+                       
+                    </swiper-slide>
+
+
+                    <swiper-slide id="slide3">
+                        <img src="images/tenweb_media_qiiO03NH.webp">
+                        <div class="header-headings">
+                            <h1>Join Our Loyalty Program Today</h1>
+                            <p>Sign up for our loyalty program to enjoy exclusive discounts early access to new arrivals , and more. Stay ahead in the gaming world with Pixel Haven</p>
+                            <button>Join Now</button>
+                        </div>
+                       
+                    </swiper-slide>
+                  </swiper-container>
             </header>
 
 
             <div class="explore main-section">
-                explore
+                <h2>Explore Our Categories</h2>
+               
+                <div id="explore-container">
+                    <swiper-container
+                    class="explore-swiper"
+                    pagination="true"
+                    pagination-clickable="true"
+                    space-between="30"
+                    slides-per-view="3"
+                    autoplay-delay="4000"
+                    stopOnLastSlide="true"
+                    loop="true"
+                  >
+                    <swiper-slide id="slide1">
+                        <img src="images/tenweb_media_5IjRQ0PM.webp">
+
+                        <p>Consoles</p> 
+                        <button>Shop Now</button>
+                    </swiper-slide>
+
+
+                    <swiper-slide id="slide2">
+                        <img src="images/tenweb_media_ambZAghc.webp">
+                        <p>Video Games</p> 
+                        <button>Shop Now</button>
+                    </swiper-slide>
+
+
+                    <swiper-slide id="slide3">
+
+                        <img src="images/tenweb_media_FUYLvTkj.webp">
+                        <p>Accessories</p> 
+                        <button>Shop Now</button>
+                    </swiper-slide>
+
+                    <swiper-slide id="slide4">
+
+                        <img src="images/tenweb_media_FUYLvTkj.webp">
+                        <p>Accessories</p> 
+                        <button>Shop Now</button>
+                    </swiper-slide>
+                   
+                  </swiper-container>
+              
+                  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+                
+                </div>
 
             </div>
 
 
             <div class="nostalgic main-section">
-                nostalgic
+                <h3>Nostalgic Gaming Gems</h3>
+                <div class="par-button-container">
+                    <p>Rediscover the classics that defined gaming.</p>
+                    <button>Shop Now</button>
+
+                </div>
+
+
+                <div class="home-products-container">
+                    <div class="home-products">
+                       <img src="images/tenweb_media_ikdlQxvw.webp"> 
+
+                       <div class="product-details">
+                        <p class="product-name">Pac-Man</p>
+                        <p class="price">$9.99</p>
+                        <a class="cart-link" href="accessories.html">Add to cart</a>
+                       </div>
+                       
+                       
+                    </div>
+
+
+                    <div class="home-products">
+                        <img src="images/tenweb_media_NC59L2hV.webp">
+                        <div class="product-details">
+                            <p class="product-name">Sonic The Hedgehog</p>
+                            <p class="price">$29.99</p>
+                            <a class="cart-link" href="accessories.html">Add to cart</a>
+                           </div>
+                    </div>
+
+                    <div class="home-products">
+                        <img src="images/tenweb_media_aDbkrEn4.webp">
+                        <div class="product-details">
+                            <p class="product-name">Stardew Valley</p>
+                            <p class="price">$19.99</p>
+                            <a class="cart-link" href="accessories.html">Add to cart</a>
+                           </div>
+                    </div>
+
+                </div>
 
 
             </div>
 
             <div class="new-game main-section">
-                new-game
+                <h3>New Game Arrivals</h3>
+                <div class="par-button-container">
+                    <p>Check out the latest titles just released!</p>
+                    <button>Shop Now</button>
+
+                </div>
+
+                <div class="home-products-container">
+                    <div class="home-products">
+                       <img src="images/tenweb_media_c6sQcCmG.webp"> 
+
+                       <div class="product-details">
+                        <p class="product-name">RGB Gaming Mouse</p>
+                        <p class="price">$49.99</p>
+                        <a class="cart-link" href="accessories.html">Add to cart</a>
+                       </div>
+                       
+                       
+                    </div>
+
+                    
+                    <div class="home-products">
+                        <img src="images/tenweb_media_6ZeRwRoa.webp">
+                        <div class="product-details">
+                            <p class="product-name">Wireless Gaming Headset</p>
+                            <p class="price"><span class="prev-price">$89.99</span> $67.99</p>
+                            <a class="cart-link" href="accessories.html">Add to cart</a>
+                           </div>
+                    </div>
+
+                    <div class="home-products">
+                        <img src="images/tenweb_media_K6sL7CBy.webp">
+                        <div class="product-details">
+                            <p class="product-name">Nintendo Switch</p>
+                            <p class="price">$299.99</p>
+                            <a class="cart-link" href="accessories.html">Add to cart</a>
+                           </div>
+                    </div>
+
+                </div>
 
 
             </div>
 
 
             <div class="exclusives main-section">
-                exclusives
+                <h3>Exclusive Collectibles</h3>
+                <div class="par-button-container">
+                    <p>Discover unique items for true fans.</p>
+                    <button>Shop Now</button>
+
+                </div>
+
+                <div class="home-products-container">
+                    <div class="home-products">
+                       <img src="images/tenweb_media_qNDLMYyY.webp"> 
+
+                       <div class="product-details">
+                        <p class="product-name">Customizable Game Controller</p>
+                        <p class="price">$69.99</p>
+                        <a class="cart-link" href="accessories.html">Add to cart</a>
+                       </div>
+                       
+                       
+                    </div>
+                     
+                    <div class="home-products">
+                        <img src="images/tenweb_media_K6sL7CBy.webp">
+                        <div class="product-details">
+                            <p class="product-name">Nintendo Switch</p>
+                            <p class="price">$299.99</p>
+                            <a class="cart-link" href="accessories.html">Add to cart</a>
+                           </div>
+                    </div>
+                    
+                    <div class="home-products">
+                        <img src="images/tenweb_media_6xjEF7hu.webp">
+                        <div class="product-details">
+                            <p class="product-name">PlayStation 5</p>
+                            <p class="price"><span class="prev-price">$499.99</span> $374.99</p>
+                            <a class="cart-link" href="accessories.html">Add to cart</a>
+                           </div>
+                    </div>
+
+                    
+
+                </div>
 
             </div>
 
             <footer class="main-section">
-                 footerx    
+                <div class="top-footer">
+                    <div class="footer-cols">
+                        <div>
+                            <h4>Shop</h4>
+                            <a>Shop All</a>
+                            <a>Video Games</a>
+                            <a>Consoles</a>
+                          </div>
+         
+                          <div>
+                             <h4>Collections</h4>
+                             <a>Latest Releases</a>
+                             <a>Limited Edition</a>
+          
+                          </div>
+         
+                          <div>
+                             <h4>Accessories</h4>
+                             <a>Accessories</a>
+         
+                          </div>
+                    </div>
+    
+                     <div class="join-news">
+                        <h4>Join our newsletter</h4>
+                        <p>Subscribe to receive updates on the latest games and exclusive offers.</p>
+                        <form>
+                            <input class="email" type="text" required placeholder="Enter your email">
+                            <input class="subscribe-button" type="submit" value="Subscribe">
+    
+                        </form>
+                        
+                     </div>
+                </div>
+                
+                 <hr>
+
+                 <div class="bottom-footer">
+                   <span>© 2024 Pixel Haven – All rights reserved.</span>
+                   <div>
+                    <a>Retro Classics</a>
+                    <a>Terms and Conditions</a>
+                    <a>Privacy Policy</a>
+                    <a>Refund and Return Policy</a>
+                   </div>
+                   <span><i class="fa-brands fa-facebook"></i> <i class="fa-brands fa-instagram"></i> <i class="fa-brands fa-twitter"></i></span>
+                 </div>
             </footer>
 
         </div>
