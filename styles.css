@@ -80,6 +80,9 @@
     position: sticky;
     top: var(--top-header-height);
     left:0 ;
+    background-color: white;
+    color: black;
+    z-index: 10;
     
 }
 
@@ -87,18 +90,19 @@
 position:fixed;
 height: var(--nav-bar-height);
 z-index: 10;
+background-color: black;
+color: white;
 
 }
 
 nav {
     height: 100%;
     width: 100%;  
-    background-color: black;
+   
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 45px;
-    color: white;
 }
 
 nav img {
@@ -156,12 +160,18 @@ header {
 
 @keyframes slide1-image {
     from {transform: scale(1)}
-    to {transform: scale(1.2)}
+    to {transform: scale(1.08)}
+}
+
+@keyframes showheadings {
+    from {visibility: visible;}
+    to {visibility: visible;}
 }
 
 .header-swiper img {
     animation: slide1-image 5s;
     animation-iteration-count: infinite;
+    animation-delay: 1s;
 }
 
 .header-headings {
@@ -171,6 +181,12 @@ header {
     justify-content: center;
     flex-direction: column;
     gap: 20px;
+    visibility: hidden;
+
+    animation: showheadings 4s;
+    animation-iteration-count: infinite;
+    animation-delay: 0.8s;
+
 
 }
 
@@ -289,8 +305,8 @@ h3 {
 }
 
 .home-products {
- height: 100% ;
- width: 100%;
+ height: fit-content ;
+ width: fit-content;
  display: flex;
  flex-direction: column;
  gap: 15px;
@@ -303,6 +319,7 @@ h3 {
 .home-products img {
     height: 80%;
     width: 100%;
+   
 
 }
 
@@ -311,10 +328,12 @@ h3 {
 }
 
 .product-details {
-    margin-left: 15px;
+    padding-left: 15px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 12px;
+    width: fit-content;
+    
 }
 
 .prev-price {
@@ -409,13 +428,32 @@ footer a, footer p {
 .seasonal {
     background-color: black;
     height: 45px;
+    color: white ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
 }
 
 .shop-now-headings {
     border: 2px solid red;
     height: 170px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px ;
+    padding-left: 50px;
 
 }
+
+.shop-now-headings p {
+    font-size: 14px;
+}
+
+.shop-now-headings h1 {
+ font-size: 30px;
+}
+
 .shop-now-container {
     border: 2px solid blue;
     display:flex ;
@@ -423,19 +461,65 @@ footer a, footer p {
 }
 
 .selection-bar {
-    border: 4px solid purple;
+    border: 2px solid purple;
     height: calc(100vh - var(--nav-bar-height) - var(--top-header-height));
-    width: 290px;
+    width: 420px;
     position: sticky;
-    top: calc(var(--nav-bar-height) + var(--top-header-height));;
+    top: calc(var(--nav-bar-height) + var(--top-header-height));
+    padding: 30px 
+}
+
+.collapse {
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.page-name-block {
+border: 0.5px solid rgba(0,0,0,0.2) ;
+border-radius: 4px;
+padding: 5px;
 
 
 }
 
-.products-shop-now {
-    border: 6px solid green;
-    height: 100vh;
+.reset {
+margin: 15px 0 50px 0;
+font-weight: bold;
+}
+
+.reset span {
+    font-size: 14px;
+    margin-left: 10px;
+    font-weight: 100;
+    
+}
+
+.filter-heading {
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter-heading h6{
+ font-size: 16px;
+ display: inline;
+ font-weight: normal;
+}
+
+.filter-heading span {
+    font-size: 10px;
+}
+.products-shop-now-container {
+    border: 2px solid green;
     width:100%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%  ;
+    gap: 50px 15px;
+    overflow: hidden;
+    margin: 30px 55px 0 0;
 
+}
 
+.products-shopnow {
+    height:480px;
+    border: 2px solid hotpink;
 }
