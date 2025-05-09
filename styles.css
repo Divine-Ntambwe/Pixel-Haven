@@ -12,13 +12,17 @@
     --header: calc(100vh - var(--top-header-height));
 }
 
+body { 
+    width: 100vh;
+    overflow-x: hidden;
+}
+
 .main-section {
-    width: 100%;
+    width: 100vw;
 }
 
 .header-circle {
   height: 100vh;
-  border: 1px solid orange;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -53,7 +57,6 @@
 
 .top-header {
     height: var(--top-header-height);
-    border: 1px solid aqua;
     background-color: white;
    
 }
@@ -66,7 +69,6 @@
 
 
 .pixel-haven {
-    border: 1px solid pink;
     position: absolute;
     top:82px;
     height: auto;
@@ -76,29 +78,37 @@
 
 .nav-bar {
     height: var(--nav-bar-height);
-    border: 1px solid blue ;
     position: sticky;
     top: var(--top-header-height);
     left:0 ;
+    background-color: white;
+    color: black;
+    z-index: 10;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
     
+}
+
+.nav-bar a:hover {
+    color: blue ;
 }
 
 #home-nav-bar {
 position:fixed;
 height: var(--nav-bar-height);
 z-index: 10;
+background-color: black;
+color: white;
 
 }
 
 nav {
     height: 100%;
     width: 100%;  
-    background-color: black;
+   
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 45px;
-    color: white;
 }
 
 nav img {
@@ -116,6 +126,11 @@ li {
    
 }
 
+li a {
+    color: inherit;
+    text-decoration: none;
+}
+
 .nav-icons  {
  display: flex;
  gap: 20px;
@@ -126,7 +141,6 @@ li {
 
 .main-body {
     height: auto ;
-    border:1px solid green ;
     position: relative;
     /* z-index: -1; */
    
@@ -137,7 +151,6 @@ li {
 
 header {
     height: calc(100vh - var(--top-header-height));
-    border: 2px solid purple ;
 
 }
 
@@ -156,12 +169,18 @@ header {
 
 @keyframes slide1-image {
     from {transform: scale(1)}
-    to {transform: scale(1.2)}
+    to {transform: scale(1.08)}
+}
+
+@keyframes showheadings {
+    from {visibility: visible;}
+    to {visibility: visible;}
 }
 
 .header-swiper img {
     animation: slide1-image 5s;
     animation-iteration-count: infinite;
+    animation-delay: 1s;
 }
 
 .header-headings {
@@ -171,6 +190,12 @@ header {
     justify-content: center;
     flex-direction: column;
     gap: 20px;
+    visibility: hidden;
+
+    animation: showheadings 4s;
+    animation-iteration-count: infinite;
+    animation-delay: 0.8s;
+
 
 }
 
@@ -184,8 +209,7 @@ header {
     font-size: 17px;
 }
 .explore {
-    height: 110vh;
-    border: 1px solid orange;
+    height: 814px;
     padding-top: 70px ;
 }
 
@@ -198,7 +222,6 @@ h2 {
     height:560px;
     width: 1250px;
     margin: 60px auto;
-    border: 2px solid brown;
 }
 
 /* SWIPER 2 */
@@ -217,7 +240,6 @@ swiper-container {
     align-items: center;
     flex-direction: column;
     gap: 20px;
-    border: 1px solid blue;
     border-radius: 8px;
 
     background-repeat: no-repeat;
@@ -245,7 +267,12 @@ swiper-slide img {
  font-size: 17px;
  font-weight: 200;
  
-} 
+}
+
+.explore-swiper button:hover {
+    cursor: pointer;
+    opacity: 80%;
+}
 
 .explore-swiper p {
     color: white;
@@ -253,7 +280,7 @@ swiper-slide img {
     font-size: 26px;
 }
 .nostalgic, .new-game, .exclusives {
-    height: 115vh;
+    height: 851px;
     background-color:rgb(241, 241, 241);
     padding: 110px ;
 }
@@ -276,6 +303,13 @@ h3 {
     font-size: 17px;
 }
 
+.par-button-container button:hover {
+    transition: 0.5s;
+    background-color: black;
+    color: white;
+    cursor:pointer;
+}
+
 .par-button-container p {
     align-self: flex-end;
 }
@@ -285,15 +319,18 @@ h3 {
     width: 100%;
     margin:70px 0 70px 0;
     display: flex;
-    gap: 15px
+    gap: 15px;
+    
 }
 
 .home-products {
- height: 100% ;
- width: 100%;
+ height: fit-content ;
+ width: fit-content;
  display: flex;
  flex-direction: column;
  gap: 15px;
+ padding-bottom: 20px;
+ 
 
 }
 .home-products:hover {
@@ -303,6 +340,7 @@ h3 {
 .home-products img {
     height: 80%;
     width: 100%;
+   
 
 }
 
@@ -311,10 +349,12 @@ h3 {
 }
 
 .product-details {
-    margin-left: 15px;
+    padding-left: 15px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 12px;
+    width: fit-content;
+    
 }
 
 .prev-price {
@@ -333,6 +373,15 @@ h3 {
     color: black;
 }
 
+.sale-tag {
+    background-color: black;
+    color: white;
+    position: absolute;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 14px;
+}
+
 
 .top-footer {
     position: relative;
@@ -342,7 +391,7 @@ h3 {
 }
 footer {
     padding: 75px 50px;
-    height: 60vh;
+    height: 444px;
 }
 
 .footer-cols {
@@ -409,33 +458,257 @@ footer a, footer p {
 .seasonal {
     background-color: black;
     height: 45px;
+    color: white ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
 }
 
 .shop-now-headings {
-    border: 2px solid red;
     height: 170px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px ;
+    padding-left: 50px;
 
 }
+
+.shop-now-headings p {
+    font-size: 14px;
+}
+
+.shop-now-headings h1 {
+ font-size: 30px;
+}
+
 .shop-now-container {
-    border: 2px solid blue;
     display:flex ;
    
 }
 
 .selection-bar {
-    border: 4px solid purple;
     height: calc(100vh - var(--nav-bar-height) - var(--top-header-height));
-    width: 290px;
+    width: 420px;
     position: sticky;
-    top: calc(var(--nav-bar-height) + var(--top-header-height));;
+    top: calc(var(--nav-bar-height) + var(--top-header-height));
+    padding: 30px ;
+    overflow: hidden ;
+}
+
+.collapse {
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.page-name-block {
+border: 0.5px solid rgba(0,0,0,0.2) ;
+border-radius: 4px;
+padding: 5px;
 
 
 }
 
-.products-shop-now {
-    border: 6px solid green;
-    height: 100vh;
+.reset {
+margin: 15px 0 50px 0;
+font-weight: bold;
+}
+
+.reset span {
+    font-size: 14px;
+    margin-left: 10px;
+    font-weight: 100;
+    
+}
+
+.filter-heading {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+.filter-heading h6{
+ font-size: 16px;
+ display: inline;
+ font-weight: normal;
+}
+
+.filter-heading span {
+    font-size: 10px;
+}
+
+.filter-heading span:hover {
+    cursor:grabbing;
+}
+
+.filter-price-top {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    padding: 0;
+    font-weight:600;
+}
+
+.select-input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 2px;
+    margin-bottom: 20px;
+}
+
+.options {
+    width: 100%;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 2px;
+    padding: 5px;
+    display: none;
+    position: absolute;
+    background-color: white;
+}
+
+.options div {
+    border-radius: 2px;
+    font-size: 14px;
+    padding: 7px;
+}
+
+.options div:hover {
+  background-color: lightgray;
+}
+
+.select-input:focus + .options {
+  display: block;
+}
+
+.price-filter-comp {
+    display: flex;
+    flex-direction: row;
+}
+
+.circle {
+    width: 25px;
+    height: 20px;
+    box-shadow: 2px 2px 10px 1px rgba(0,0,0,0.2) ;
+    background-color: white;
+    border-radius: 100%;
+  
+}
+
+.line {
+    width: 100% ;
+    height: 5px ;
+    background-color: black;
+    align-self: center;
+    
+}
+
+.filter-price-bottom {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    padding: 20px 10px;
+    color: gray;
+}
+
+.checkboxes  {
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+
+.checkboxes div:hover {
+    color: lightgrey;
+}
+.products-shop-now-container {
     width:100%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%  ;
+    gap: 50px 15px;
+    margin: 30px 55px 0 0;
+    height: fit-content;
+
+}
+
+.products-shopnow {
+    height:480px;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width:1697px) {
+
+     .nostalgic, .new-game, .exclusives {
+        height: fit-content;
+        padding: 100px ;
+    
+    }
+}
+
+@media screen and (max-width: 1225px) {
+    #explore-container {
+        width: 1220px;
+    }
+
+    .email {
+        width: 220px;
+    }
+
+    .subscribe-button {
+        width: 130px ;
+    }
+    
+}
+
+@media screen and (max-width: 1019px) {
+    #explore-container {
+        width: 1010px;
+    }
+    h4 {
+        font-size: 18px;
+
+    }
+
+    footer a {
+        font-size: 12px;
+    }
+
+    .footer-cols {
+      width: 80%;
+    }
+
+    .join-news {
+        margin-left: 100px;
+    }
+
+    footer input{
+        height: 40px;
+    }
+
+    .email {
+        padding: 0;
+    }
+
+    .email {
+        width: 200px;
+    }
+
+    .subscribe-button {
+        width: 100px ;
+    }
+
+    .bottom-footer span {
+        font-size: 14px;
+    }
+
+    .nostalgic, .new-game, .exclusives {
+        height: fit-content;
+        padding: 60px ;
+    }
+
+    
+
 
 
 }

@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Pixel Haven</title>
+    <title>Preview Themes - 10web</title>
 </head>
 <body>
     <div class="header-circle main-section">
@@ -32,10 +32,10 @@
              <img src="images/logo_Hd7llw8M.webp">
              <div class="nav-items">
                 <ul>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="video_games.html">Video Games</a></li>
-                    <li><a>Consoles</a></li>
-                    <li><a>Accessories</a></li>
-                    <li><a>Retro Classics</a></li>
+                    <li><a href="consoles.html">Consoles</a></li>
+                    <li><a href="accessories.html">Accessories</a></li>
                 </ul>
              </div>
              <div class="nav-icons"><i class="fa-solid fa-user"></i> <i class="fa-solid fa-bag-shopping"></i></div>
@@ -46,6 +46,7 @@
         <div class="main-body main-section">
             <header class="main-section">
                 <swiper-container  class="header-swiper" 
+                    autoplay="true"
                     autoplay-delay="4000"
                     stopOnLastSlide="true"
                     loop="true"
@@ -91,26 +92,26 @@
                 <div id="explore-container">
                     <swiper-container
                     class="explore-swiper"
-                    pagination="true"
-                    pagination-clickable="true"
-                    space-between="30"
+                    space-between="20"
                     slides-per-view="3"
+                    autoplay="true"
                     autoplay-delay="4000"
-                    stopOnLastSlide="true"
                     loop="true"
+                    stopOnLastSlide="true"
+                  
                   >
                     <swiper-slide id="slide1">
                         <img src="images/tenweb_media_5IjRQ0PM.webp">
 
                         <p>Consoles</p> 
-                        <button>Shop Now</button>
+                        <a href="consoles.html"><button>Shop Now</button></a>
                     </swiper-slide>
 
 
                     <swiper-slide id="slide2">
                         <img src="images/tenweb_media_ambZAghc.webp">
                         <p>Video Games</p> 
-                        <button>Shop Now</button>
+                        <a href="video_games.html"><button>Shop Now</button></a>
                     </swiper-slide>
 
 
@@ -118,15 +119,32 @@
 
                         <img src="images/tenweb_media_FUYLvTkj.webp">
                         <p>Accessories</p> 
-                        <button>Shop Now</button>
+                        <a href="accessories.html"><button>Shop Now</button></a>
                     </swiper-slide>
 
-                    <swiper-slide id="slide4">
+                    <swiper-slide id="slide1">
+                        <img src="images/tenweb_media_5IjRQ0PM.webp">
+
+                        <p>Consoles</p> 
+                        <a href="consoles.html"><button>Shop Now</button></a>
+                    </swiper-slide>
+
+
+                    <swiper-slide id="slide2">
+                        <img src="images/tenweb_media_ambZAghc.webp">
+                        <p>Video Games</p> 
+                        <a href="video_games.html"><button>Shop Now</button></a>
+                    </swiper-slide>
+
+
+                    <swiper-slide id="slide3">
 
                         <img src="images/tenweb_media_FUYLvTkj.webp">
                         <p>Accessories</p> 
-                        <button>Shop Now</button>
+                        <a href="accessories.html"><button>Shop Now</button></a>
                     </swiper-slide>
+
+                    
                    
                   </swiper-container>
               
@@ -141,7 +159,7 @@
                 <h3>Nostalgic Gaming Gems</h3>
                 <div class="par-button-container">
                     <p>Rediscover the classics that defined gaming.</p>
-                    <button>Shop Now</button>
+                    <a href="retro_classics.html"><button>Shop Now</button></a>
 
                 </div>
 
@@ -187,7 +205,8 @@
                 <h3>New Game Arrivals</h3>
                 <div class="par-button-container">
                     <p>Check out the latest titles just released!</p>
-                    <button>Shop Now</button>
+                    <a href="index.html"><button>Shop Now</button></a>
+                    
 
                 </div>
 
@@ -233,7 +252,7 @@
                 <h3>Exclusive Collectibles</h3>
                 <div class="par-button-container">
                     <p>Discover unique items for true fans.</p>
-                    <button>Shop Now</button>
+                    <a href="limited_edition.html"><button>Shop Now</button></a>
 
                 </div>
 
