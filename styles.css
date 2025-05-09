@@ -12,8 +12,13 @@
     --header: calc(100vh - var(--top-header-height));
 }
 
+body { 
+    width: 100vh;
+    overflow-x: hidden;
+}
+
 .main-section {
-    width: 100%;
+    width: 100vw;
 }
 
 .header-circle {
@@ -204,7 +209,7 @@ header {
     font-size: 17px;
 }
 .explore {
-    height: 110vh;
+    height: 814px;
     padding-top: 70px ;
 }
 
@@ -262,7 +267,12 @@ swiper-slide img {
  font-size: 17px;
  font-weight: 200;
  
-} 
+}
+
+.explore-swiper button:hover {
+    cursor: pointer;
+    opacity: 80%;
+}
 
 .explore-swiper p {
     color: white;
@@ -270,7 +280,7 @@ swiper-slide img {
     font-size: 26px;
 }
 .nostalgic, .new-game, .exclusives {
-    height: 115vh;
+    height: 851px;
     background-color:rgb(241, 241, 241);
     padding: 110px ;
 }
@@ -293,6 +303,13 @@ h3 {
     font-size: 17px;
 }
 
+.par-button-container button:hover {
+    transition: 0.5s;
+    background-color: black;
+    color: white;
+    cursor:pointer;
+}
+
 .par-button-container p {
     align-self: flex-end;
 }
@@ -302,7 +319,8 @@ h3 {
     width: 100%;
     margin:70px 0 70px 0;
     display: flex;
-    gap: 15px
+    gap: 15px;
+    
 }
 
 .home-products {
@@ -312,6 +330,7 @@ h3 {
  flex-direction: column;
  gap: 15px;
  padding-bottom: 20px;
+ 
 
 }
 .home-products:hover {
@@ -372,7 +391,7 @@ h3 {
 }
 footer {
     padding: 75px 50px;
-    height: 60vh;
+    height: 444px;
 }
 
 .footer-cols {
@@ -614,4 +633,82 @@ gap: 20px;
 
 .products-shopnow {
     height:480px;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width:1697px) {
+
+     .nostalgic, .new-game, .exclusives {
+        height: fit-content;
+        padding: 100px ;
+    
+    }
+}
+
+@media screen and (max-width: 1225px) {
+    #explore-container {
+        width: 1220px;
+    }
+
+    .email {
+        width: 220px;
+    }
+
+    .subscribe-button {
+        width: 130px ;
+    }
+    
+}
+
+@media screen and (max-width: 1019px) {
+    #explore-container {
+        width: 1010px;
+    }
+    h4 {
+        font-size: 18px;
+
+    }
+
+    footer a {
+        font-size: 12px;
+    }
+
+    .footer-cols {
+      width: 80%;
+    }
+
+    .join-news {
+        margin-left: 100px;
+    }
+
+    footer input{
+        height: 40px;
+    }
+
+    .email {
+        padding: 0;
+    }
+
+    .email {
+        width: 200px;
+    }
+
+    .subscribe-button {
+        width: 100px ;
+    }
+
+    .bottom-footer span {
+        font-size: 14px;
+    }
+
+    .nostalgic, .new-game, .exclusives {
+        height: fit-content;
+        padding: 60px ;
+    }
+
+    
+
+
+
 }
